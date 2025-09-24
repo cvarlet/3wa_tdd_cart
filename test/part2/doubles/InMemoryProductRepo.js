@@ -1,21 +1,31 @@
-const STOCK = {
-  strawberry: 1,
-  lemon: 0,
-};
+// const STOCK = {
+//   strawberry: 1,
+//   lemon: 0,
+// };
+
+const PRODUCTS = [
+  { id: 1, name: "strawberry", price: 1, stock: 1 },
+  { id: 2, name: "lemon", price: 1.5, stock: 0 },
+];
 
 class InMemoryProductRepo {
-  constructor(stock = {}) {
-    this.stock = stock;
+  constructor(products = []) {
+    this.products = products;
   }
 
-  isProductInStock(item) {
-    if (!(item in this.stock)) {
+  isProductInStock(itemName) {
+    const product = this.products.find((product) => product.name === itemName);
+
+    if (!product) {
       throw new Error("This item does not exist.");
     }
 
-    const stock = this.stock[item];
-    return stock > 0;
+    if (product.stock <= 0) {
+      return false;
+    }
+
+    return product;
   }
 }
 
-module.exports = { InMemoryProductRepo, STOCK };
+module.exports = { InMemoryProductRepo, PRODUCTS };

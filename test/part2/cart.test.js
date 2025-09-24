@@ -10,7 +10,7 @@ describe.skip("cart", () => {
   it("should add an item", () => {
     const item = "strawberry";
     cart.add(item, 1);
-    expect(cart.content[item]).toEqual({ qty: 1, price: 1 });
+    expect(cart.content[item]).toEqual({ qty: 1, price: 1, totalPrice: 1 });
   });
 
   it("should remove an item", () => {
@@ -24,6 +24,6 @@ describe.skip("cart", () => {
     const item = "strawberry";
     cart.add(item, 1);
     cart.updateQty(item, 3);
-    expect(cart.content[item]).toEqual({ qty: 3, price: 1 });
+    expect(cart.content[item]).toEqual({ qty: 3, price: 1, totalPrice: 3 });
   });
 });
