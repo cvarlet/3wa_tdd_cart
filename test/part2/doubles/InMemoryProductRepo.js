@@ -1,8 +1,3 @@
-// const STOCK = {
-//   strawberry: 1,
-//   lemon: 0,
-// };
-
 const PRODUCTS = [
   { id: 1, name: "strawberry", price: 1, stock: 1 },
   { id: 2, name: "lemon", price: 1.5, stock: 0 },

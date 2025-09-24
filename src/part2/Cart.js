@@ -1,10 +1,10 @@
 /*exemple de Cart:
- content = [
+ content = {
   strawberry: {qty: 1, price: 1, totalPrice: 1}
-]
+}
 */
 class Cart {
-  constructor(content = []) {
+  constructor(content = {}) {
     this.content = content;
   }
 
