@@ -1,6 +1,6 @@
 const { Cart } = require("../../src/part2/Cart");
 
-describe.skip("cart", () => {
+describe("cart", () => {
   let cart;
 
   beforeEach(() => {

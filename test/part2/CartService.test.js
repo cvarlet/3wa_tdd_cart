@@ -15,7 +15,7 @@ describe("Cart Service", () => {
   });
 
   describe("Checking stock before adding an item to a Cart", () => {
-    describe.skip("Repository", () => {
+    describe("Repository", () => {
       it("Correct scenario : should say an item is in stock", () => {
         const product = "strawberry";
         const result = inMemoryProductRepo.isProductInStock(product);
@@ -41,7 +41,7 @@ describe("Cart Service", () => {
       });
     });
 
-    describe.skip("CartService", () => {
+    describe("CartService", () => {
       describe("Adding a product to a cart", () => {
         it("Correct scenario: should add a product to a cart", async () => {
           const product = "strawberry";
