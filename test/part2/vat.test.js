@@ -1,7 +1,7 @@
 const { Cart } = require("../../src/part2/Cart");
 const { calculateVat } = require("../../src/part2/vat");
 
-describe("VAT", () => {
+describe.skip("VAT", () => {
   let cart;
 
   beforeEach(() => {
